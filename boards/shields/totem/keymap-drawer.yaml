@@ -1,0 +1,78 @@
+layout:
+  zmk_keyboard: totem
+
+_aliases:
+  trns: &trns {t: ▽, type: trans}
+  held: &held {type: held}
+  spc: &spc $$mdi:keyboard-space$$
+  bspc: &bspc $$mdi:keyboard-backspace$$
+  del: &del $$mdi:backspace-reverse$$
+  llspc: &llspc {t: *spc, h: Lower}
+  ulbspc: &ulbspc {t: *bspc, h: Upper}
+  albspc: &albspc {t: *bspc, h: Adjust}
+  alspc: &alspc {t: *spc, h: Adjust}
+  tab: &tab $$mdi:keyboard-tab$$
+  ret: &ret $$mdi:keyboard-return$$
+  sft: &sft $$mdi:apple-keyboard-shift$$
+  ctl: &ctl $$mdi:apple-keyboard-control$$
+  opt: &opt $$mdi:apple-keyboard-option$$
+  cmd: &cmd $$mdi:apple-keyboard-command$$
+  caps: &caps $$mdi:apple-keyboard-caps$$
+  hmA: &hmA {t: A, h: *ctl}
+  hmS: &hmS {t: S, h: *opt}
+  hmD: &hmD {t: D, h: *cmd}
+  hmF: &hmF {t: F, h: *sft}
+  hmJ: &hmJ {t: J, h: *sft}
+  hmK: &hmK {t: K, h: *cmd}
+  hmL: &hmL {t: L, h: *opt}
+  hmscln: &hmscln {t: ;, h: *ctl}
+  mute: &mute $$mdi:volume-mute$$
+  vold: &vold $$mdi:volume-minus$$
+  volu: &volu $$mdi:volume-plus$$
+  mply: &mply $$mdi:play-pause$$
+  mprv: &mprv $$mdi:skip-previous$$
+  mnxt: &mnxt $$mdi:skip-next$$
+  msb1: &msb1 $$mdi:mouse-left-click$$
+  msb2: &msb2 $$mdi:mouse-right-click$$
+  mslft: &mslft {t: $$mdi:mouse$$, right: ←}
+  msdwn: &msdwn {t: $$mdi:mouse$$, right: ↓}
+  msup: &msup {t: $$mdi:mouse$$, right: ↑}
+  msrgt: &msrgt {t: $$mdi:mouse$$, right: →}
+  mwlft: &mwlft {t: $$mdi:mouse-scroll-wheel$$, right: ←}
+  mwdwn: &mwdwn {t: $$mdi:mouse-scroll-wheel$$, right: ↓}
+  mwup: &mwup {t: $$mdi:mouse-scroll-wheel$$, right: ↑}
+  mwrgt: &mwrgt {t: $$mdi:mouse-scroll-wheel$$, right: →}
+  bt0: &bt0 {t: $$mdi:bluetooth$$, right: 0}
+  bt1: &bt1 {t: $$mdi:bluetooth$$, right: 1}
+  bt2: &bt2 {t: $$mdi:bluetooth$$, right: 2}
+  btclr: &btclr {t: $$mdi:bluetooth$$, right: $$mdi:delete$$}
+
+layers:
+  Base:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - [*hmA, *hmS, *hmD, *hmF, G, H, *hmJ, *hmK, *hmL, *hmscln]
+  - [Esc, Z, X, C, V, B, N, M, ',', ., /, *ret]
+  - ['', '', *ulbspc, *llspc, '', '']
+  Lower:
+  - [/, 7, 8, 9, '*', '%', '[', (, ), ']']
+  - ['-', 4, 5, 6, +, ←, ↓, ↑, →, ':']
+  - [., 0, 1, 2, 3, '=', Home, PgDn, PgUp, End, '', '']
+  - [*trns, *trns, *albspc, *held, *trns, *trns]
+  Upper:
+  - ['`', ., _, '*', '@', '%', '[', (, ), ']']
+  - [<, '|', '-', '>', /, '!', ',', '{', '}', ;]
+  - ['~', '&', "'", '"', +, \, '#', ^, ':', '=', $, '?']
+  - [*trns, *trns, *held, *alspc, *trns, *trns]
+  Adjust:
+  - [*bt0, *bt1, *bt2, '', *btclr, '', '', '', '', '']
+  - ['', '', *msb1, *msb2, '', *mslft, *msdwn, *msup, *msrgt, '']
+  - [*mute, *vold, *volu, *mprv, *mply, *mnxt, *mwlft, *mwdwn, *mwup, *mwrgt, '', '']
+  - ['', '', *held, *held, '', '']
+
+combos:
+- { tk: [W, E], k: *tab, l: [Base] }
+- { tk: [X, C], k: *bspc, l: [Base] }
+- { tk: [',', .], k: *del, l: [Base] }
+- { tk: [F, J], k: *caps, l: [Base] }
+- { tk: [1, 2], k: *spc, l: [Lower] }
+- { tk: [':', '='], k: *bspc, l: [Upper] }
