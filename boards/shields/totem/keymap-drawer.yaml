@@ -46,6 +46,7 @@ _aliases:
   bt1: &bt1 {t: $$mdi:bluetooth$$, right: 1}
   bt2: &bt2 {t: $$mdi:bluetooth$$, right: 2}
   btclr: &btclr {t: $$mdi:bluetooth$$, right: $$mdi:delete$$}
+  usb: &usb {t: $$mdi:usb$$}
 
 layers:
   Base:
@@ -64,7 +65,7 @@ layers:
   - ['~', '&', "'", '"', +, \, '#', ^, ':', '=', $, '?']
   - [*trns, *trns, *held, *alspc, *trns, *trns]
   Adjust:
-  - [*bt0, *bt1, *bt2, '', *btclr, '', '', '', '', '']
+  - [*bt0, *bt1, *bt2, *usb, *btclr, '', '', '', '', '']
   - ['', '', *msb1, *msb2, '', *mslft, *msdwn, *msup, *msrgt, '']
   - [*mute, *vold, *volu, *mprv, *mply, *mnxt, *mwlft, *mwdwn, *mwup, *mwrgt, '', '']
   - ['', '', *held, *held, '', '']
