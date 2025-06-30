@@ -18,14 +18,22 @@ _aliases:
   opt: &opt $$mdi:apple-keyboard-option$$
   cmd: &cmd $$mdi:apple-keyboard-command$$
   caps: &caps $$mdi:apple-keyboard-caps$$
-  hmA: &hmA {t: A, h: *ctl}
-  hmS: &hmS {t: S, h: *opt}
-  hmD: &hmD {t: D, h: *cmd}
-  hmF: &hmF {t: F, h: *sft}
-  hmJ: &hmJ {t: J, h: *sft}
-  hmK: &hmK {t: K, h: *cmd}
-  hmL: &hmL {t: L, h: *opt}
-  hmscln: &hmscln {t: ;, h: *ctl}
+  hmN: &hmN {t: N, h: *ctl}
+  hmR: &hmR {t: R, h: *opt}
+  hmT: &hmT {t: T, h: *cmd}
+  hmS: &hmS {t: S, h: *sft}
+  hmH: &hmH {t: H, h: *sft}
+  hmA: &hmA {t: A, h: *cmd}
+  hmE: &hmE {t: E, h: *opt}
+  hmI: &hmI {t: I, h: *ctl}
+  hmAq: &hmAq {t: A, h: *ctl}
+  hmSq: &hmSq {t: S, h: *opt}
+  hmDq: &hmDq {t: D, h: *cmd}
+  hmFq: &hmFq {t: F, h: *sft}
+  hmJq: &hmJq {t: J, h: *sft}
+  hmKq: &hmKq {t: K, h: *cmd}
+  hmLq: &hmLq {t: L, h: *opt}
+  hmsclnq: &hmsclnq {t: ;, h: *ctl}
   mute: &mute $$mdi:volume-mute$$
   vold: &vold $$mdi:volume-minus$$
   volu: &volu $$mdi:volume-plus$$
@@ -50,10 +58,15 @@ _aliases:
 
 layers:
   Base:
-  - [Q, W, E, R, T, Y, U, I, O, P]
-  - [*hmA, *hmS, *hmD, *hmF, G, H, *hmJ, *hmK, *hmL, *hmscln]
-  - [Esc, Z, X, C, V, B, N, M, ',', ., /, *ret]
+  - [B, L, D, W, Z, "'", F, O, U, J]
+  - [*hmN, *hmR, *hmT, *hmS, G, Y, *hmH, *hmA, *hmE, *hmI]
+  - [Esc, Q, X, M, C, V, K, P, ',', ., /, *ret]
   - ['', '', *ulbspc, *llspc, '', '']
+  QWERTY:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - [*hmAq, *hmSq, *hmDq, *hmFq, G, H, *hmJq, *hmKq, *hmLq, *hmsclnq]
+  - [*trns, Z, X, C, V, B, N, M, ',', ., /, *trns]
+  - [*trns, *trns, *trns, *trns, *trns, *trns]
   Lower:
   - [/, 7, 8, 9, '*', '%', '[', (, ), ']']
   - ['-', 4, 5, 6, +, ←, ↓, ↑, →, ':']
@@ -67,13 +80,13 @@ layers:
   Adjust:
   - [*bt0, *bt1, *bt2, *usb, *btclr, '', '', '', '', '']
   - ['', '', *msb1, *msb2, '', *mslft, *msdwn, *msup, *msrgt, '']
-  - [*mute, *vold, *volu, *mprv, *mply, *mnxt, *mwlft, *mwdwn, *mwup, *mwrgt, '', '']
+  - [*mute, *vold, *volu, *mprv, *mply, *mnxt, *mwlft, *mwdwn, *mwup, *mwrgt, '', QWERTY]
   - ['', '', *held, *held, '', '']
 
 combos:
-- { tk: [W, E], k: *tab, l: [Base] }
-- { tk: [X, C], k: *bspc, l: [Base] }
-- { tk: [',', .], k: *del, l: [Base] }
-- { tk: [F, J], k: *caps, l: [Base] }
+- { tk: [L, D], k: *tab, l: [Base, QWERTY] }
+- { tk: [X, M], k: *bspc, l: [Base, QWERTY] }
+- { tk: [',', .], k: *del, l: [Base, QWERTY] }
+- { tk: [S, H], k: *caps, l: [Base, QWERTY] }
 - { tk: [1, 2], k: *spc, l: [Lower] }
 - { tk: [':', '='], k: *bspc, l: [Upper] }
