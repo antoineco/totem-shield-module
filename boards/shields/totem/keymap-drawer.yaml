@@ -19,6 +19,7 @@ _aliases:
   cmd: &cmd $$mdi:apple-keyboard-command$$
   caps: &caps $$mdi:apple-keyboard-caps$$
   sqtundr: &sqtundr {t: "'", s: _}
+  commqmark: &commqmark {t: ',', s: '?'}
   mindqt: &mindqt {t: '-', s: '"'}
   fslhlt: &fslhlt {t: /, s: <}
   hmN: &hmN {t: N, h: *ctl}
@@ -63,12 +64,12 @@ layers:
   Base:
   - [B, L, D, W, Z, *sqtundr, F, O, U, J]
   - [*hmN, *hmR, *hmT, *hmS, G, Y, *hmH, *hmA, *hmE, *hmI]
-  - [Esc, Q, X, M, C, V, K, P, ., *mindqt, *fslhlt, *ret]
+  - [Esc, Q, X, M, C, V, K, P, ., *mindqt, *fslhlt, *commqmark]
   - ['', '', *ulbspc, *llspc, '', '']
   QWERTY:
   - [Q, W, E, R, T, Y, U, I, O, P]
   - [*hmAq, *hmSq, *hmDq, *hmFq, G, H, *hmJq, *hmKq, *hmLq, *hmsclnq]
-  - [*trns, Z, X, C, V, B, N, M, ',', ., /, *trns]
+  - [*trns, Z, X, C, V, B, N, M, ',', ., /, "'"]
   - [*trns, *trns, *trns, *trns, *trns, *trns]
   Lower:
   - [/, 7, 8, 9, '*', '%', '[', (, ), ']']
@@ -89,6 +90,7 @@ layers:
 combos:
 - { tk: [L, D], k: *tab, l: [Base, QWERTY] }
 - { tk: [X, M], k: *bspc, l: [Base, QWERTY] }
+- { tk: [O, U], k: *ret, l: [Base, QWERTY] }
 - { tk: [., '-'], k: *del, l: [Base, QWERTY] }
 - { tk: [S, H], k: *caps, l: [Base, QWERTY] }
 - { tk: [1, 2], k: *spc, l: [Lower] }
