@@ -18,10 +18,11 @@ _aliases:
   opt: &opt $$mdi:apple-keyboard-option$$
   cmd: &cmd $$mdi:apple-keyboard-command$$
   caps: &caps $$mdi:apple-keyboard-caps$$
-  sqtundr: &sqtundr {t: "'", s: _}
-  commqmark: &commqmark {t: ',', s: '?'}
-  mindqt: &mindqt {t: '-', s: '"'}
-  fslhlt: &fslhlt {t: /, s: <}
+  sftdot: &sftdot {t: ., s: ':'}
+  sftcom: &sftcom {t: ',', s: ;}
+  sftqmrk: &sftqmrk {t: '?', s: '!'}
+  sftsqt: &sftsqt {t: "'", s: _}
+  sftmin: &sftmin {t: '-', s: '"'}
   hmN: &hmN {t: N, h: *ctl}
   hmR: &hmR {t: R, h: *opt}
   hmT: &hmT {t: T, h: *cmd}
@@ -62,9 +63,9 @@ _aliases:
 
 layers:
   Base:
-  - [B, L, D, W, Z, *sqtundr, F, O, U, J]
+  - [B, L, D, W, Z, *sftsqt, F, O, U, J]
   - [*hmN, *hmR, *hmT, *hmS, G, Y, *hmH, *hmA, *hmE, *hmI]
-  - [Esc, Q, X, M, C, V, K, P, ., *mindqt, *fslhlt, *commqmark]
+  - [Esc, Q, X, M, C, V, K, P, *sftdot, *sftmin, *sftqmrk, *sftcom]
   - ['', '', *ulbspc, *llspc, '', '']
   QWERTY:
   - [Q, W, E, R, T, Y, U, I, O, P]
