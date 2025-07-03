@@ -65,7 +65,7 @@ layers:
   Base:
   - [B, L, D, W, Z, *sftsqt, F, O, U, J]
   - [*hmN, *hmR, *hmT, *hmS, G, Y, *hmH, *hmA, *hmE, *hmI]
-  - [Esc, Q, X, M, C, V, K, P, *sftdot, *sftmin, *sftqmrk, *sftcom]
+  - [Esc, Q, X, M, C, V, K, P, *sftdot, *sftmin, *sftcom, *sftqmrk]
   - ['', '', *ulbspc, *llspc, '', '']
   QWERTY:
   - [Q, W, E, R, T, Y, U, I, O, P]
